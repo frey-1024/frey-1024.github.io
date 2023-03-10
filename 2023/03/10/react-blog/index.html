@@ -10,7 +10,7 @@
   
   <title>
     
-      Series | 博毅
+      react_blog | 博毅
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -180,7 +180,7 @@
 </header>
 
     <div id="article-banner">
-  <h2>Series</h2>
+  <h2>react_blog</h2>
   <p class="post-date">2023-03-10</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
@@ -193,7 +193,7 @@
   <div class="toc-main">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav">none</ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%BF%99%E6%98%AF%E6%A0%87%E9%A2%98%E5%95%A6"><span class="toc-nav-text">这是标题啦</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%99%E6%98%AF%E6%A0%87%E9%A2%98%E5%95%A63"><span class="toc-nav-text">这是标题啦3</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%BF%99%E6%98%AF%E6%A0%87%E9%A2%98%E5%95%A62"><span class="toc-nav-text">这是标题啦2</span></a></li></ol>
     
   </div>
 </aside>
@@ -201,12 +201,41 @@
   <!-- Catalog END -->
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"></section>
+    <section class="markdown-content"><h2 id="这是标题啦"><a href="#这是标题啦" class="headerlink" title="这是标题啦"></a>这是标题啦</h2><p>我能说点啥呢？最新还没<code>想好</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; canUseDOM &#125; <span class="keyword">from</span> <span class="string">&#x27;@autobest-ui/utils&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 重新实现AbortController终止类，兼容不同浏览器，后期可兼容nodejs</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">AjaxAbortController</span> &#123;</span><br><span class="line">  <span class="attr">signal</span>: <span class="title class_">AbortSignal</span>;</span><br><span class="line"></span><br><span class="line">  <span class="attr">abort</span>: <span class="function">() =&gt;</span> <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (canUseDOM &amp;&amp; <span class="keyword">typeof</span> <span class="title class_">AbortController</span> !== <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> controller = <span class="keyword">new</span> <span class="title class_">AbortController</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">signal</span> = controller.<span class="property">signal</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">abort</span> = <span class="function">() =&gt;</span> controller.<span class="title function_">abort</span>();</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">signal</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">abort</span> = <span class="function">() =&gt;</span> &#123;&#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="这是标题啦3"><a href="#这是标题啦3" class="headerlink" title="这是标题啦3"></a>这是标题啦3</h3><p>我能说点啥呢？最新还没<code>想好</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; canUseDOM &#125; <span class="keyword">from</span> <span class="string">&#x27;@autobest-ui/utils&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 重新实现AbortController终止类，兼容不同浏览器，后期可兼容nodejs</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">AjaxAbortController</span> &#123;</span><br><span class="line">  <span class="attr">signal</span>: <span class="title class_">AbortSignal</span>;</span><br><span class="line"></span><br><span class="line">  <span class="attr">abort</span>: <span class="function">() =&gt;</span> <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (canUseDOM &amp;&amp; <span class="keyword">typeof</span> <span class="title class_">AbortController</span> !== <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> controller = <span class="keyword">new</span> <span class="title class_">AbortController</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">signal</span> = controller.<span class="property">signal</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">abort</span> = <span class="function">() =&gt;</span> controller.<span class="title function_">abort</span>();</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">signal</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">abort</span> = <span class="function">() =&gt;</span> &#123;&#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="这是标题啦2"><a href="#这是标题啦2" class="headerlink" title="这是标题啦2"></a>这是标题啦2</h2><p>我能说点啥呢？最新还没<code>想好</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; canUseDOM &#125; <span class="keyword">from</span> <span class="string">&#x27;@autobest-ui/utils&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 重新实现AbortController终止类，兼容不同浏览器，后期可兼容nodejs</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">AjaxAbortController</span> &#123;</span><br><span class="line">  <span class="attr">signal</span>: <span class="title class_">AbortSignal</span>;</span><br><span class="line"></span><br><span class="line">  <span class="attr">abort</span>: <span class="function">() =&gt;</span> <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (canUseDOM &amp;&amp; <span class="keyword">typeof</span> <span class="title class_">AbortController</span> !== <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> controller = <span class="keyword">new</span> <span class="title class_">AbortController</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">signal</span> = controller.<span class="property">signal</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">abort</span> = <span class="function">() =&gt;</span> controller.<span class="title function_">abort</span>();</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">signal</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">abort</span> = <span class="function">() =&gt;</span> &#123;&#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></section>
     <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#React" >
+    <span class="tag-code">React</span>
+  </a>
+
+      </div>
     
     <!-- Tags END -->
     <!-- NAV START -->
     
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2023/03/10/hello-world/">
+        <span class="nav-arrow">← </span>
+        
+          Hello World
+        
+      </a>
+    
+    
+  </div>
+
     <!-- NAV END -->
     <!-- 打赏 START -->
     
@@ -253,7 +282,7 @@
 
 <script>
   (function () {
-    var url = 'https://frey-1024.github.io/series/index.html';
+    var url = 'https://frey-1024.github.io/2023/03/10/react-blog/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
